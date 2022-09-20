@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
 	@State private var showAlert = false
 	@State private var alertMessage = ""
+	@State private var showSettingsDialog = false
 	
 	var currencies = [
 		CurrencyWatchlistItemData(
@@ -174,44 +175,66 @@ struct ContentView: View {
 	]
 	
 	var body: some View {
-		VStack {
-			HStack {
-				Button {
-					showAlert = true
-					alertMessage = "Add Watchlist Item"
-				} label: {
-					Image(systemName: "plus.circle.fill")
-						.resizable()
-						.frame(width: 30, height: 30)
-						.foregroundColor(.onBackground)
-						.padding(10)
+		ZStack {
+			VStack {
+				HStack {
+					Button {
+						showAlert = true
+						alertMessage = "Add Watchlist Item"
+					} label: {
+						Image(systemName: "plus.circle.fill")
+							.resizable()
+							.frame(width: 30, height: 30)
+							.foregroundColor(.onBackground)
+							.padding(.leading, 10)
+					}
+					
+					Spacer()
+					
+					Text("Curmin")
+						.bold()
+						.font(.system(size: 28))
+					
+					Spacer()
+					
+					Button {
+						withAnimation {
+							showSettingsDialog = true
+						}
+					} label: {
+						Image(systemName: "gearshape.fill")
+							.resizable()
+							.frame(width: 30, height: 30)
+							.foregroundColor(.onBackground)
+							.padding(.trailing, 10)
+					}
 				}
-				
-				Spacer()
-				
-				Button {
-					showAlert = true
-					alertMessage = "Settings Dialog"
-				} label: {
-					Image(systemName: "gearshape.fill")
-						.resizable()
-						.frame(width: 30, height: 30)
-						.foregroundColor(.onBackground)
-						.padding(10)
+				ScrollView {
+					CurrencyWatchlistView(currencyWatchlistItems: currencies)
+						.padding(.top, 20)
+				}
+				.refreshable {
+					print("Refreshed")
 				}
 			}
-			ScrollView {
-				CurrencyWatchlistView(currencyWatchlistItems: currencies)
-					.padding(.top, 20)
-			}
+			.alert(isPresented: $showAlert, content: {
+				Alert(title: Text(alertMessage))
+			})
+			.background(Color.background)
+			.blur(radius: showSettingsDialog ? 20 : 0)
+			
+			
+			SettingsDialog(
+				showSettingsDialog: $showSettingsDialog,
+				onDismiss: {
+					withAnimation {
+						showSettingsDialog = false
+					}
+				}
+			)
 		}
-		.alert(isPresented: $showAlert, content: {
-			Alert(title: Text(alertMessage))
-		})
-		.background(Color.background)
 		
 	}
-	
 }
 
 struct ContentView_Previews: PreviewProvider {
