@@ -21,6 +21,8 @@
 		71514E8B28D4FF4300A62820 /* CurminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E8A28D4FF4300A62820 /* CurminTests.swift */; };
 		71514E9528D4FF4300A62820 /* CurminUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E9428D4FF4300A62820 /* CurminUITests.swift */; };
 		71514E9728D4FF4300A62820 /* CurminUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E9628D4FF4300A62820 /* CurminUITestsLaunchTests.swift */; };
+		71A9BF3E28DB750E00911CC0 /* CurminWarningDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9BF3D28DB750E00911CC0 /* CurminWarningDialog.swift */; };
+		71A9BF4028DB794B00911CC0 /* CurminErrorDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9BF3F28DB794B00911CC0 /* CurminErrorDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		71514E9028D4FF4300A62820 /* CurminUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurminUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71514E9428D4FF4300A62820 /* CurminUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminUITests.swift; sourceTree = "<group>"; };
 		71514E9628D4FF4300A62820 /* CurminUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71A9BF3D28DB750E00911CC0 /* CurminWarningDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminWarningDialog.swift; sourceTree = "<group>"; };
+		71A9BF3F28DB794B00911CC0 /* CurminErrorDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminErrorDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				7113BCB428DA207E00990ED4 /* CurminBaseDialog.swift */,
+				71A9BF3D28DB750E00911CC0 /* CurminWarningDialog.swift */,
+				71A9BF3F28DB794B00911CC0 /* CurminErrorDialog.swift */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71A9BF4028DB794B00911CC0 /* CurminErrorDialog.swift in Sources */,
 				7113BCB828DA249900990ED4 /* SettingsDialog.swift in Sources */,
 				71514E7C28D4FF4300A62820 /* ContentView.swift in Sources */,
 				7138A1AA28D9BC9000AE6816 /* Colors.swift in Sources */,
@@ -326,6 +333,7 @@
 				7138A1AC28D9C13900AE6816 /* CurrencyWatchlistItemData.swift in Sources */,
 				71514E7A28D4FF4300A62820 /* CurminApp.swift in Sources */,
 				7138A1A728D9B96800AE6816 /* CurrencyWatchlistItem.swift in Sources */,
+				71A9BF3E28DB750E00911CC0 /* CurminWarningDialog.swift in Sources */,
 				7113BCB528DA207E00990ED4 /* CurminBaseDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
