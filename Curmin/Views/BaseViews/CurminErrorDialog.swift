@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CurminErrorDialog: View {
-	@State var showErrorDialog: Bool
+	@Binding var showErrorDialog: Bool
 	var errorText: String
 	var onDismiss: () -> Void
 	var onPositiveButtonClick: () -> Void
@@ -37,9 +37,9 @@ struct CurminErrorDialog: View {
 						Text("Yes")
 							.foregroundColor(.colorErrorForeground)
 							.font(.system(size: 30))
+							.frame(maxWidth: .infinity)
 					}
 					.padding(.vertical, 10)
-					.frame(maxWidth: .infinity)
 					.background(Color.colorErrorBackground)
 					.cornerRadius(10)
 					.padding(.leading, 10)
@@ -49,16 +49,4 @@ struct CurminErrorDialog: View {
 			)
 		}
 	}
-}
-
-struct CurminErrorDialog_Previews: PreviewProvider {
-    static var previews: some View {
-        CurminErrorDialog(
-			showErrorDialog: true,
-			errorText: "An unexpected error occured.",
-			onDismiss: {print("Dismissed")},
-			onPositiveButtonClick: {print("Positive button clicked.")},
-			onNegativeButtonClick: {print("Negative button clicked.")}
-		)
-    }
 }

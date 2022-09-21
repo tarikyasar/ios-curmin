@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CurminWarningDialog: View {
-	@State var showWarningDialog: Bool
+	@Binding var showWarningDialog: Bool
 	var warningText: String
 	var onDismiss: () -> Void
 	var onPositiveButtonClick: () -> Void
@@ -38,9 +38,9 @@ struct CurminWarningDialog: View {
 							Text("Yes")
 								.foregroundColor(.onPrimary)
 								.font(.system(size: 30))
+								.frame(maxWidth: .infinity)
 						}
 						.padding(.vertical, 10)
-						.frame(maxWidth: .infinity)
 						.background(Color.accentColor)
 						.cornerRadius(10)
 						.padding(.leading, 10)
@@ -52,9 +52,9 @@ struct CurminWarningDialog: View {
 							Text("No")
 								.foregroundColor(.onSurface)
 								.font(.system(size: 30))
+								.frame(maxWidth: .infinity)
 						}
 						.padding(.vertical, 10)
-						.frame(maxWidth: .infinity)
 						.background(Color.surface)
 						.cornerRadius(10)
 						.padding(.trailing, 10)
@@ -64,17 +64,5 @@ struct CurminWarningDialog: View {
 				maxHeight: 310
 			)
 		}
-	}
-}
-
-struct CurminWarningDialog_Previews: PreviewProvider {
-	static var previews: some View {
-		CurminWarningDialog(
-			showWarningDialog: true,
-			warningText: "Watchlist item containing USD-TRY currencies will be deleted.\nAre you sure?",
-			onDismiss: {print("Dismissed")},
-			onPositiveButtonClick: {print("Positive button clicked.")},
-			onNegativeButtonClick: {print("Negative button clicked.")}
-		)
 	}
 }

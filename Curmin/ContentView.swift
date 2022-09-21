@@ -8,179 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-	@State private var showAlert = false
-	@State private var alertMessage = ""
 	@State private var showSettingsDialog = false
-	
-	var currencies = [
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		),
-		CurrencyWatchlistItemData(
-			id: UUID().uuidString,
-			baseCurrencyCode: "USD",
-			targetCurrencyCode: "TRY",
-			rate: Double.random(in: 5.0...20.0),
-			changeRate: Double.random(in: -0.5...0.5),
-			date: "20.09.2022"
-		)
-	]
+	@State private var showAddToWatchlistDialog = false
+	@State var currencies: [CurrencyWatchlistItemData] = []
 	
 	var body: some View {
 		ZStack {
 			VStack {
 				HStack {
 					Button {
-						showAlert = true
-						alertMessage = "Add Watchlist Item"
+						withAnimation {
+							showAddToWatchlistDialog = true
+						}
 					} label: {
 						Image(systemName: "plus.circle.fill")
 							.resizable()
@@ -209,19 +48,26 @@ struct ContentView: View {
 							.padding(.trailing, 10)
 					}
 				}
-				ScrollView {
-					CurrencyWatchlistView(currencyWatchlistItems: currencies)
-						.padding(.top, 20)
+				
+				Spacer()
+				
+				if (currencies.isEmpty) {
+					Text("Empty")
+				} else {
+					ScrollView {
+						CurrencyWatchlistView(currencyWatchlistItems: currencies)
+							.padding(.top, 20)
+					}
+					.refreshable {
+						print("Refreshed")
+					}
 				}
-				.refreshable {
-					print("Refreshed")
-				}
+				
+				Spacer()
 			}
-			.alert(isPresented: $showAlert, content: {
-				Alert(title: Text(alertMessage))
-			})
+			.frame(maxHeight: .infinity)
 			.background(Color.background)
-			.blur(radius: showSettingsDialog ? 20 : 0)
+			.blur(radius: (showSettingsDialog || showAddToWatchlistDialog) ? 20 : 0)
 			
 			
 			SettingsDialog(
@@ -232,6 +78,33 @@ struct ContentView: View {
 					}
 				}
 			)
+			.shadow(color: Color.black, radius: 5)
+			
+			AddToWatchlistDialog(
+				showDialog: $showAddToWatchlistDialog,
+				baseCurrency: "ABC",
+				targetCurrency: "ABC",
+				onAddButtonClick: { baseCurrency, targetCurrency in
+					currencies.append(
+						CurrencyWatchlistItemData(
+							id: UUID().uuidString,
+							baseCurrencyCode: baseCurrency,
+							targetCurrencyCode: targetCurrency,
+							rate: Double.random(in: 5.0...20.0),
+							changeRate: Double.random(in: -0.5...0.5), date: "21.09.2022")
+					)
+					withAnimation {
+						showAddToWatchlistDialog = false
+					}
+				},
+				onDismiss: {
+					withAnimation {
+						showAddToWatchlistDialog = false
+					}
+				},
+				currencies: ["ABC", "DEF", "ASD", "ZXF", "UKH", "MNO", "KLI", "JMB"]
+			)
+			.shadow(color: Color.black, radius: 5)
 		}
 		
 	}
