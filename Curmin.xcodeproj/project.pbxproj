@@ -11,7 +11,6 @@
 		7113BCB828DA249900990ED4 /* SettingsDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113BCB728DA249900990ED4 /* SettingsDialog.swift */; };
 		7113BCBA28DA2A0A00990ED4 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113BCB928DA2A0A00990ED4 /* Themes.swift */; };
 		7130BE7328DB871C0046F2C3 /* AddToWatchlistDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7130BE7228DB871C0046F2C3 /* AddToWatchlistDialog.swift */; };
-		7138A1A428D9B90200AE6816 /* CurrencyWatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138A1A328D9B90200AE6816 /* CurrencyWatchlistView.swift */; };
 		7138A1A728D9B96800AE6816 /* CurrencyWatchlistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138A1A628D9B96800AE6816 /* CurrencyWatchlistItem.swift */; };
 		7138A1AA28D9BC9000AE6816 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138A1A928D9BC9000AE6816 /* Colors.swift */; };
 		7138A1AC28D9C13900AE6816 /* CurrencyWatchlistItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138A1AB28D9C13900AE6816 /* CurrencyWatchlistItemData.swift */; };
@@ -22,6 +21,8 @@
 		71514E8B28D4FF4300A62820 /* CurminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E8A28D4FF4300A62820 /* CurminTests.swift */; };
 		71514E9528D4FF4300A62820 /* CurminUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E9428D4FF4300A62820 /* CurminUITests.swift */; };
 		71514E9728D4FF4300A62820 /* CurminUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E9628D4FF4300A62820 /* CurminUITestsLaunchTests.swift */; };
+		7175EDB628DCDF5900F7088C /* CurrencyWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EDB528DCDF5900F7088C /* CurrencyWatchlist.swift */; };
+		7175EDB828DCDFA600F7088C /* CurrencyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EDB728DCDFA600F7088C /* CurrencyDetail.swift */; };
 		71A9BF3E28DB750E00911CC0 /* CurminWarningDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9BF3D28DB750E00911CC0 /* CurminWarningDialog.swift */; };
 		71A9BF4028DB794B00911CC0 /* CurminErrorDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9BF3F28DB794B00911CC0 /* CurminErrorDialog.swift */; };
 /* End PBXBuildFile section */
@@ -48,7 +49,6 @@
 		7113BCB728DA249900990ED4 /* SettingsDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDialog.swift; sourceTree = "<group>"; };
 		7113BCB928DA2A0A00990ED4 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		7130BE7228DB871C0046F2C3 /* AddToWatchlistDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToWatchlistDialog.swift; sourceTree = "<group>"; };
-		7138A1A328D9B90200AE6816 /* CurrencyWatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyWatchlistView.swift; sourceTree = "<group>"; };
 		7138A1A628D9B96800AE6816 /* CurrencyWatchlistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyWatchlistItem.swift; sourceTree = "<group>"; };
 		7138A1A928D9BC9000AE6816 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7138A1AB28D9C13900AE6816 /* CurrencyWatchlistItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyWatchlistItemData.swift; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		71514E9028D4FF4300A62820 /* CurminUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurminUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71514E9428D4FF4300A62820 /* CurminUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminUITests.swift; sourceTree = "<group>"; };
 		71514E9628D4FF4300A62820 /* CurminUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7175EDB528DCDF5900F7088C /* CurrencyWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyWatchlist.swift; sourceTree = "<group>"; };
+		7175EDB728DCDFA600F7088C /* CurrencyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetail.swift; sourceTree = "<group>"; };
 		71A9BF3D28DB750E00911CC0 /* CurminWarningDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminWarningDialog.swift; sourceTree = "<group>"; };
 		71A9BF3F28DB794B00911CC0 /* CurminErrorDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminErrorDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,8 @@
 		7138A1A128D9B8CC00AE6816 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7175EDBA28DCE60100F7088C /* CurrencyWatchlist */,
+				7175EDB928DCE5FC00F7088C /* CurrencyDetail */,
 				7113BCB628DA248600990ED4 /* BaseViews */,
 				7138A1A628D9B96800AE6816 /* CurrencyWatchlistItem.swift */,
 				7113BCB728DA249900990ED4 /* SettingsDialog.swift */,
@@ -119,14 +123,6 @@
 				7113BCB928DA2A0A00990ED4 /* Themes.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		7138A1A528D9B95A00AE6816 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				7138A1A328D9B90200AE6816 /* CurrencyWatchlistView.swift */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 		7138A1A828D9BC8400AE6816 /* Common */ = {
@@ -160,7 +156,6 @@
 		71514E7828D4FF4300A62820 /* Curmin */ = {
 			isa = PBXGroup;
 			children = (
-				7138A1A528D9B95A00AE6816 /* Screens */,
 				7138A1A828D9BC8400AE6816 /* Common */,
 				7138A1A228D9B8E400AE6816 /* Models */,
 				7138A1A128D9B8CC00AE6816 /* Views */,
@@ -195,6 +190,22 @@
 				71514E9628D4FF4300A62820 /* CurminUITestsLaunchTests.swift */,
 			);
 			path = CurminUITests;
+			sourceTree = "<group>";
+		};
+		7175EDB928DCE5FC00F7088C /* CurrencyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7175EDB728DCDFA600F7088C /* CurrencyDetail.swift */,
+			);
+			path = CurrencyDetail;
+			sourceTree = "<group>";
+		};
+		7175EDBA28DCE60100F7088C /* CurrencyWatchlist */ = {
+			isa = PBXGroup;
+			children = (
+				7175EDB528DCDF5900F7088C /* CurrencyWatchlist.swift */,
+			);
+			path = CurrencyWatchlist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,8 +342,9 @@
 				7113BCB828DA249900990ED4 /* SettingsDialog.swift in Sources */,
 				71514E7C28D4FF4300A62820 /* ContentView.swift in Sources */,
 				7138A1AA28D9BC9000AE6816 /* Colors.swift in Sources */,
-				7138A1A428D9B90200AE6816 /* CurrencyWatchlistView.swift in Sources */,
+				7175EDB628DCDF5900F7088C /* CurrencyWatchlist.swift in Sources */,
 				7113BCBA28DA2A0A00990ED4 /* Themes.swift in Sources */,
+				7175EDB828DCDFA600F7088C /* CurrencyDetail.swift in Sources */,
 				7138A1AC28D9C13900AE6816 /* CurrencyWatchlistItemData.swift in Sources */,
 				71514E7A28D4FF4300A62820 /* CurminApp.swift in Sources */,
 				7130BE7328DB871C0046F2C3 /* AddToWatchlistDialog.swift in Sources */,

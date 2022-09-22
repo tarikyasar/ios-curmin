@@ -38,12 +38,6 @@ struct AddToWatchlistDialog: View {
 						
 						Spacer()
 						
-						Text("Select base and target currencies. Remember, they must be different from each other.")
-							.padding()
-							.multilineTextAlignment(.center)
-						
-						Spacer()
-						
 						HStack {
 							Text("Base Currency")
 								.font(.system(size: 22))
@@ -112,7 +106,14 @@ struct AddToWatchlistDialog: View {
 							.cornerRadius(4)
 						}
 						.padding(.horizontal, 10)
-						.padding(.bottom, 20)
+						.padding(.bottom, 10)
+						
+						Spacer()
+						
+						Text("Select base and target currencies. Remember, they must be different from each other.")
+							.padding()
+							.multilineTextAlignment(.center)
+							.padding(.bottom, 20)
 						
 						Spacer()
 						

@@ -17,6 +17,7 @@ struct CurrencyWatchlistItem: View {
 			HStack {
 				Text("\(currencyWatchlistItemData.baseCurrencyCode)-\(currencyWatchlistItemData.targetCurrencyCode)")
 					.padding(.leading, 10)
+					.foregroundColor(.onSurface)
 				
 				Spacer()
 				
@@ -24,6 +25,7 @@ struct CurrencyWatchlistItem: View {
 					Spacer()
 					
 					Text("\(currencyWatchlistItemData.rate, specifier: "%.2f")")
+						.foregroundColor(.onSurface)
 					
 					HStack {
 						Image(systemName: currencyWatchlistItemData.changeRate < 0.0 ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill")
@@ -32,6 +34,7 @@ struct CurrencyWatchlistItem: View {
 							.foregroundColor(currencyWatchlistItemData.changeRate < 0.0 ? .colorArrowDown : .colorArrowUp)
 						
 						Text("\(currencyWatchlistItemData.changeRate, specifier: "%.2f")")
+							.foregroundColor(currencyWatchlistItemData.changeRate < 0.0 ? .colorArrowDown : .colorArrowUp)
 					}
 					.padding(6)
 					.background(currencyWatchlistItemData.changeRate < 0.0 ? Color.colorDown : Color.colorUp)
@@ -45,11 +48,10 @@ struct CurrencyWatchlistItem: View {
 				
 				Text(currencyWatchlistItemData.date)
 					.padding(.trailing, 10)
+					.foregroundColor(.onSurface)
 			}
 		}
 		.cornerRadius(10)
-		.frame(height: 60)
-		
 	}
 }
 
