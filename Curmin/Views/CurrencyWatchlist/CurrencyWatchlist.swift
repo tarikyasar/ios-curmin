@@ -11,6 +11,7 @@ struct CurrencyWatchlist: View {
 	@State private var showSettingsDialog = false
 	@State private var showAddToWatchlistDialog = false
 	@State var currencies: [CurrencyWatchlistItemData] = [CurrencyWatchlistItemData(id: UUID().uuidString, baseCurrencyCode: "ABC", targetCurrencyCode: "DEF", rate: 10.0, changeRate: 0.05, date: "22.09.2022")]
+	@State private var offsets = [CGSize](repeating: CGSize.zero, count: 6)
 	
 	var body: some View {
 		NavigationView {
@@ -22,7 +23,11 @@ struct CurrencyWatchlist: View {
 						ScrollView {
 							ForEach(currencies) { item in
 								NavigationLink {
-									CurrencyDetail(baseCurrency: item.baseCurrencyCode, targetCurrency: item.targetCurrencyCode)
+									CurrencyDetail(
+										baseCurrency: item.baseCurrencyCode,
+										targetCurrency: item.targetCurrencyCode,
+										currencyRate: item.rate
+									)
 								} label: {
 									CurrencyWatchlistItem(currencyWatchlistItemData: item)
 										.padding(.horizontal, 10)
@@ -31,7 +36,7 @@ struct CurrencyWatchlist: View {
 						}
 						.padding(.top, 20)
 						.refreshable {
-							print("Refreshed")
+							print("Refreshed!")
 						}
 					}
 				}
