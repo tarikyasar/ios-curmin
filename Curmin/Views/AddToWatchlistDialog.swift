@@ -15,6 +15,7 @@ struct AddToWatchlistDialog: View {
 	@State private var expandedTargetMenu = false
 	var onAddButtonClick: (String, String) -> Void
 	var onDismiss: () -> Void
+	var onShowInfoClick: () -> Void
 	var currencies: [String]
 	
 	var body: some View {
@@ -23,17 +24,31 @@ struct AddToWatchlistDialog: View {
 				content:
 					VStack {
 						HStack {
+							Button {
+								onShowInfoClick()
+							} label: {
+								Image(systemName: "info.circle")
+									.resizable()
+									.frame(width: 20, height: 20)
+									.padding(10)
+							}
+							.foregroundColor(Color.onSurface)
+							
+							
 							Spacer()
 							
-							Image(systemName: "xmark")
-								.resizable()
-								.frame(width: 20, height: 20)
-								.padding(10)
-								.onTapGesture {
-									baseCurrency = currencies[0]
-									baseCurrency = currencies[0]
-									onDismiss()
-								}
+							Button {
+								baseCurrency = currencies[0]
+								baseCurrency = currencies[0]
+								onDismiss()
+							} label: {
+								Image(systemName: "xmark")
+									.resizable()
+									.frame(width: 20, height: 20)
+									.padding(10)
+							}
+							.foregroundColor(Color.onSurface)
+							
 						}
 						
 						Spacer()
@@ -110,13 +125,6 @@ struct AddToWatchlistDialog: View {
 						
 						Spacer()
 						
-						Text("Select base and target currencies. Remember, they must be different from each other.")
-							.padding()
-							.multilineTextAlignment(.center)
-							.padding(.bottom, 20)
-						
-						Spacer()
-						
 						Button {
 							onAddButtonClick(
 								baseCurrency,
@@ -125,7 +133,7 @@ struct AddToWatchlistDialog: View {
 							baseCurrency = currencies[0]
 							targetCurrency = currencies[0]
 						} label: {
-							Text("Yes")
+							Text("Add")
 								.foregroundColor(.onPrimary)
 								.font(.system(size: 30))
 								.frame(maxWidth: .infinity)
@@ -137,7 +145,7 @@ struct AddToWatchlistDialog: View {
 						.padding(.leading, 10)
 					}
 				,
-				maxHeight: 360
+				maxHeight: 240
 			)
 		}
 	}

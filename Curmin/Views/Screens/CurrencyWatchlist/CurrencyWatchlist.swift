@@ -10,6 +10,7 @@ import SwiftUI
 struct CurrencyWatchlist: View {
 	@State private var showSettingsDialog = false
 	@State private var showAddToWatchlistDialog = false
+	@State private var showToast = false
 	@State var currencies: [CurrencyWatchlistItemData] = [CurrencyWatchlistItemData(id: UUID().uuidString, baseCurrencyCode: "ABC", targetCurrencyCode: "DEF", rate: 10.0, changeRate: 0.05, date: "22.09.2022")]
 	@State private var offsets = [CGSize](repeating: CGSize.zero, count: 6)
 	
@@ -83,12 +84,19 @@ struct CurrencyWatchlist: View {
 							showAddToWatchlistDialog = false
 						}
 					},
+					onShowInfoClick: {
+						showToast = true
+					},
 					currencies: ["ABC", "DEF", "ASD", "ZXF", "UKH", "MNO", "KLI", "JMB"]
 				)
 				.shadow(color: Color.black, radius: 5)
 			}
 			.navigationTitle("Curmin")
 			.navigationBarTitleDisplayMode(.inline)
+			.toast(
+				message: "Select base and target currencies. Remember, they must be different from each other.",
+				isShowing: $showToast,
+				duration: Toast.short)
 			.toolbar {
 				ToolbarItem(placement: .navigationBarLeading) {
 					Button {
