@@ -16,6 +16,11 @@
 		71514E8B28D4FF4300A62820 /* CurminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E8A28D4FF4300A62820 /* CurminTests.swift */; };
 		71514E9528D4FF4300A62820 /* CurminUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E9428D4FF4300A62820 /* CurminUITests.swift */; };
 		71514E9728D4FF4300A62820 /* CurminUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71514E9628D4FF4300A62820 /* CurminUITestsLaunchTests.swift */; };
+		719D41732A02F1A7009472ED /* SymbolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D41722A02F1A7009472ED /* SymbolListViewModel.swift */; };
+		719D41762A02F571009472ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D41752A02F571009472ED /* Constants.swift */; };
+		71B316DD2A02E7C300A3C71D /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B316DC2A02E7C300A3C71D /* CurrencyManager.swift */; };
+		71B316E12A02E99900A3C71D /* SymbolListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B316E02A02E99900A3C71D /* SymbolListResponse.swift */; };
+		71B316E32A02EC0900A3C71D /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B316E22A02EC0900A3C71D /* Symbol.swift */; };
 		CFD5721820F4B60A2E40BA32 /* Pods_CurminTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BB81B4CF7FD94AEA7AAB56 /* Pods_CurminTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +59,11 @@
 		71514E9028D4FF4300A62820 /* CurminUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurminUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71514E9428D4FF4300A62820 /* CurminUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminUITests.swift; sourceTree = "<group>"; };
 		71514E9628D4FF4300A62820 /* CurminUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurminUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		719D41722A02F1A7009472ED /* SymbolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListViewModel.swift; sourceTree = "<group>"; };
+		719D41752A02F571009472ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		71B316DC2A02E7C300A3C71D /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
+		71B316E02A02E99900A3C71D /* SymbolListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListResponse.swift; sourceTree = "<group>"; };
+		71B316E22A02EC0900A3C71D /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		74FE31C8E3ABE23B0C720006 /* Pods_Curmin_CurminUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curmin_CurminUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50ABA6280783FAACDF850A9 /* Pods-CurminTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurminTests.debug.xcconfig"; path = "Target Support Files/Pods-CurminTests/Pods-CurminTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +131,9 @@
 		71514E7828D4FF4300A62820 /* Curmin */ = {
 			isa = PBXGroup;
 			children = (
+				719D41742A02F56C009472ED /* Utils */,
+				719D416E2A02F170009472ED /* SymbolList */,
+				71B316DB2A02E7B500A3C71D /* Managers */,
 				71514E7928D4FF4300A62820 /* CurminApp.swift */,
 				71514E7B28D4FF4300A62820 /* ContentView.swift */,
 				71514E7D28D4FF4300A62820 /* Assets.xcassets */,
@@ -154,6 +167,40 @@
 			path = CurminUITests;
 			sourceTree = "<group>";
 		};
+		719D416E2A02F170009472ED /* SymbolList */ = {
+			isa = PBXGroup;
+			children = (
+				719D41752A02F571009472ED /* Constants.swift */,
+				71B316DE2A02E92800A3C71D /* Model */,
+				719D41722A02F1A7009472ED /* SymbolListViewModel.swift */,
+			);
+			path = SymbolList;
+			sourceTree = "<group>";
+		};
+		719D41742A02F56C009472ED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		71B316DB2A02E7B500A3C71D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				71B316DC2A02E7C300A3C71D /* CurrencyManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		71B316DE2A02E92800A3C71D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71B316E02A02E99900A3C71D /* SymbolListResponse.swift */,
+				71B316E22A02EC0900A3C71D /* Symbol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F63ABDD16C8662F8DFD9B570 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +211,6 @@
 				C50ABA6280783FAACDF850A9 /* Pods-CurminTests.debug.xcconfig */,
 				24E6FF5D13E60A128838C469 /* Pods-CurminTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,6 +453,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				71514E7C28D4FF4300A62820 /* ContentView.swift in Sources */,
+				71B316E32A02EC0900A3C71D /* Symbol.swift in Sources */,
+				719D41762A02F571009472ED /* Constants.swift in Sources */,
+				719D41732A02F1A7009472ED /* SymbolListViewModel.swift in Sources */,
+				71B316E12A02E99900A3C71D /* SymbolListResponse.swift in Sources */,
+				71B316DD2A02E7C300A3C71D /* CurrencyManager.swift in Sources */,
 				71514E7A28D4FF4300A62820 /* CurminApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,20 +6,32 @@
 //
 
 import SwiftUI
-import Alamofire
+
 
 struct ContentView: View {
+    @StateObject var viewModel = SymbolListViewModel()
+    
     var body: some View {
-        VStack {
-            Button(action: {
-                AF.request("https://httpbin.org/get").response { response in
-                    print(response)
+        NavigationView {
+            ZStack(alignment: .center) {
+                VStack {
+                    if (viewModel.symbols != nil) {
+                        List(viewModel.symbols!, id: \.self) { symbol in
+                            Text("\(symbol.code): \(symbol.name)")
+                        }
+                    }
                 }
-            }) {
-                Text("Click me")
+                
+                if (viewModel.isLoading) {
+                    ProgressView()
+                }
             }
+            .navigationTitle("Symbols")
         }
-        .padding()
+        .onAppear {
+            viewModel.getSymbols()
+        }
+        
     }
 }
 
