@@ -1,0 +1,6 @@
+framework module Pods_Curmin_CurminUITests {
+  umbrella header "Pods-Curmin-CurminUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

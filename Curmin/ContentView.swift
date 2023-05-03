@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button(action: {
+                AF.request("https://httpbin.org/get").response { response in
+                    print(response)
+                }
+            }) {
+                Text("Click me")
+            }
         }
         .padding()
     }
